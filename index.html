@@ -51,6 +51,19 @@
       .kan-body { display:grid; grid-template-columns:230px 1fr; }.kan-proj { border-right:1px solid #e5e7eb; background:#fff; padding:14px 10px; display:flex; flex-direction:column; gap:2px; }.kan-proj h5 { margin:10px 6px 6px; font:700 10px "DM Mono",monospace; letter-spacing:.08em; color:#9ca3af; }.kan-proj button { display:flex; align-items:center; gap:8px; padding:7px 10px; border-radius:8px; border:none; background:none; color:#4b5563; font:500 12px; text-align:left; cursor:pointer; width:100%; }.kan-proj button:hover { background:#f3f4f6; }.kan-proj button.active { background:#ccfbf1; color:#0f766e; font-weight:600; }.kan-proj button.lock { opacity:.85; }.kan-proj .kan-foot { margin-top:auto; padding-top:10px; border-top:1px solid #f3f4f6; }.kan-proj .kan-foot button { color:#6b7280; font-size:11px; }.kan-ver { font:500 9px "DM Mono",monospace; color:#9ca3af; padding:8px 10px 0; }
       .kan-main { padding:18px; display:flex; flex-direction:column; gap:14px; min-width:0; }.kan-metrics { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }.kan-metrics .time { font:600 12px; color:#374151; margin-right:auto; }.badge-k { font:700 9px "DM Mono",monospace; border-radius:99px; padding:5px 10px; white-space:nowrap; }.bk-blue { background:#dbeafe; color:#1d4ed8; }.bk-red { background:#fee2e2; color:#dc2626; }.bk-orange { background:#ffedd5; color:#ea580c; }.bk-green { background:#dcfce7; color:#16a34a; }.bk-gray { background:#f3f4f6; color:#6b7280; }
       .kan-board { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; overflow-x:auto; padding-bottom:6px; scroll-snap-type:x proximity; scrollbar-width:thin; }.kan-col { background:#eef1f4; border-radius:12px; padding:10px; min-width:190px; max-height:600px; overflow-y:auto; display:flex; flex-direction:column; gap:8px; scroll-snap-align:start; }.kan-col h6 { margin:0 2px 4px; font:700 10px "DM Mono",monospace; letter-spacing:.07em; color:#4b5563; display:flex; justify-content:space-between; align-items:center; }.kan-col h6 b { font:700 10px "DM Mono",monospace; color:#9ca3af; }.kan-col.drag-over { outline:2px dashed #0d9488; outline-offset:-2px; }.kan-card { background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:10px; cursor:grab; box-shadow:0 1px 2px #00000008; transition:box-shadow .15s,transform .15s; }.kan-card:hover { box-shadow:0 6px 14px #00000014; }.kan-card.dragging { opacity:.4; }.kan-card p { margin:0 0 8px; font:600 12px; color:#1f2937; line-height:1.35; }.kan-tags { display:flex; gap:4px; flex-wrap:wrap; margin-bottom:8px; }.tag-k { font:700 8px "DM Mono",monospace; border-radius:5px; padding:3px 6px; letter-spacing:.04em; }.tg-ia { background:#ede9fe; color:#7c3aed; }.tg-web { background:#dbeafe; color:#1d4ed8; }.tg-rrss { background:#fce7f3; color:#db2777; }.tg-seo { background:#ffedd5; color:#ea580c; }.tg-meta { background:#cffafe; color:#0891b2; }.tg-doc { background:#e5e7eb; color:#4b5563; }.kan-meta { display:flex; align-items:center; justify-content:space-between; gap:6px; }.kan-pri { font:700 9px "DM Mono",monospace; border-radius:99px; padding:3px 7px; }.kp-media { background:#fef3c7; color:#b45309; }.kp-baja { background:#f3f4f6; color:#6b7280; }.kp-alta { background:#fee2e2; color:#dc2626; }.kan-av { width:24px; height:24px; border-radius:50%; display:grid; place-items:center; color:#fff; font:700 10px "DM Sans",sans-serif; }.kan-avs { display:flex; }.kan-avs .kan-av { margin-left:-6px; border:2px solid #fff; }.kan-avs .kan-av:first-child { margin-left:0; }.kan-check { font:700 9px "DM Mono",monospace; color:#6b7280; }.kan-empty { border:2px dashed #d1d5db; border-radius:10px; padding:24px 10px; text-align:center; color:#9ca3af; font-size:11px; line-height:1.6; }.kan-done-date { font:500 9px "DM Mono",monospace; color:#9ca3af; }
+      /* Vistas interactivas de las demos */
+      .crm-view,.fac-view { display:none; }.crm-view.active,.fac-view.active { display:flex; flex-direction:column; gap:16px; }
+      .view-card { background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:16px; }.view-card h4 { margin:0 0 10px; font:700 14px Syne,sans-serif; color:#0f172a; }
+      .lead-row { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid #f1f5f9; font-size:12px; color:#334155; }.lead-row:last-child { border-bottom:none; }.lead-name { font-weight:600; flex:1; }
+      .status-pill { font:700 9px "DM Mono",monospace; border-radius:99px; padding:4px 9px; white-space:nowrap; border:none; cursor:pointer; }.sp-new { background:#dbeafe; color:#1d4ed8; }.sp-follow { background:#ffedd5; color:#ea580c; }.sp-done { background:#dcfce7; color:#16a34a; }.sp-fail { background:#fee2e2; color:#dc2626; }
+      .stat-row { display:grid; grid-template-columns:110px 1fr 60px; gap:10px; align-items:center; font-size:11px; color:#64748b; }.stat-bar { height:10px; border-radius:99px; background:#eff6ff; overflow:hidden; }.stat-bar i { display:block; height:100%; border-radius:99px; background:linear-gradient(90deg,#2563eb,#60a5fa); }
+      .bar-chart { display:flex; align-items:flex-end; gap:8px; height:120px; }.bar { flex:1; border-radius:6px 6px 0 0; background:linear-gradient(180deg,#2563eb,#93c5fd); min-height:6px; position:relative; }.bar span { position:absolute; bottom:-18px; left:0; right:0; text-align:center; font:500 9px "DM Mono",monospace; color:#64748b; }
+      .whatsapp-chat { display:flex; flex-direction:column; gap:8px; }.msg { max-width:78%; padding:9px 12px; border-radius:14px; font-size:12px; line-height:1.45; }.msg.in { background:#f1f5f9; color:#334155; align-self:flex-start; border-bottom-left-radius:4px; }.msg.out { background:#2563eb; color:#fff; align-self:flex-end; border-bottom-right-radius:4px; }
+      .wa-input { display:flex; gap:8px; margin-top:12px; }.wa-input input { flex:1; border:1px solid #e2e8f0; border-radius:10px; padding:10px 12px; font:500 13px "DM Sans",sans-serif; background:#fff; color:#0f172a; }.wa-input button { background:#2563eb; color:#fff; border:none; border-radius:10px; padding:10px 14px; font:600 13px "DM Sans",sans-serif; cursor:pointer; }
+      .dropzone { border:2px dashed #cbd5e1; border-radius:14px; padding:34px; text-align:center; color:#64748b; font-size:12px; cursor:pointer; transition:border-color .2s,background .2s; }.dropzone:hover { border-color:#2563eb; background:#eff6ff; }
+      .toggle-row { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #f1f5f9; font-size:12px; color:#334155; }.toggle-row:last-child { border-bottom:none; }.switch { width:38px; height:22px; border-radius:99px; background:#cbd5e1; position:relative; cursor:pointer; transition:background .2s; flex-shrink:0; }.switch::after { content:""; position:absolute; top:2px; left:2px; width:18px; height:18px; border-radius:50%; background:#fff; transition:left .2s; }.switch.on { background:#2563eb; }.switch.on::after { left:18px; }
+      .kan-rec-panel { display:none; }.kan-rec-panel.open { display:block; }
+      .toast { position:fixed; left:50%; bottom:26px; transform:translateX(-50%) translateY(8px); background:var(--ink); color:var(--paper); padding:11px 18px; border-radius:99px; font:500 11px "DM Mono",monospace; letter-spacing:.06em; text-transform:uppercase; z-index:60; opacity:0; pointer-events:none; transition:opacity .3s,transform .3s; }.toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
       /* React Bits inspired — BorderGlow (vanilla port), glow que sigue al cursor */
       @property --edge-proximity { syntax:'<number>'; inherits:false; initial-value:0; }
       @property --cursor-angle { syntax:'<angle>'; inherits:false; initial-value:45deg; }
@@ -105,16 +118,24 @@
             <div class="border-glow-card"><div class="showcase-app"><div class="crm">
               <aside class="crm-side">
                 <div class="crm-logo"><i>☎</i>CallCenter<span style="font:500 10px 'DM Mono';color:#64748b;letter-spacing:.1em">PRO</span></div>
-                <div class="crm-menu"><button class="active"><i>⌂</i>Inicio</button><button class="active"><i>☏</i>Llamadas</button><button><i>▤</i>Leads</button><button><i>◫</i>Estadísticas</button><button><i>✆</i>WhatsApp</button><button><i>⭱</i>Subir CSVs</button><button><i>⚙</i>Configuración</button></div>
+                <div class="crm-menu"><button data-view="home"><i>⌂</i>Inicio</button><button data-view="calls" class="active"><i>☏</i>Llamadas</button><button data-view="leads"><i>▤</i>Leads</button><button data-view="stats"><i>◫</i>Estadísticas</button><button data-view="whatsapp"><i>✆</i>WhatsApp</button><button data-view="upload"><i>⭱</i>Subir CSVs</button><button data-view="settings"><i>⚙</i>Configuración</button></div>
                 <div class="crm-user"><div class="row"><span class="crm-avatar">PR</span><div><b>Pablo Roche</b><span>Administrador</span></div></div><button class="logout">Cerrar sesión</button></div>
               </aside>
               <div class="crm-main">
-                <div class="crm-top"><div><h3>CallCenter · CRM de llamadas con IA y WhatsApp con IA</h3><p>Plataforma comercial para gestionar leads, llamadas, analítica y conversaciones de WhatsApp.</p></div><div class="crm-date" data-hoy>HOY - 20 ago 2026</div></div>
-                <div><p class="crm-sec">Centro de llamadas · Llamadas</p><p style="margin:6px 0 0;color:#64748b;font-size:12px">Selecciona una marca para ver el historial de llamadas.</p></div>
-                <div class="crm-kpis"><div class="crm-kpi"><i>▣</i><div><b>19</b><span>Marcas activas</span></div></div><div class="crm-kpi"><i>☰</i><div><b>10627</b><span>Intenciones registradas</span></div></div><div class="crm-kpi"><i>✦</i><div><b>3.7%</b><span>Leads interesados</span></div></div><div class="crm-kpi"><i>☏</i><div><b>2.6</b><span>Media de llamadas por lead</span></div></div></div>
-                <div class="crm-filters"><select><option>agosto 2026</option><option>julio 2026</option><option>junio 2026</option></select><input id="crm-search" type="search" placeholder="Buscar marca: Voltara" /><span class="crm-count">10627 intenciones en 19 marcas · 41 en pipeline</span></div>
-                <div class="crm-grid" id="crm-grid"></div>
-                <div class="crm-detail" id="crm-detail"><h5 id="crm-detail-title">Historial de llamadas</h5><div id="crm-detail-rows"></div></div>
+                <div class="crm-view active" id="crm-calls">
+                  <div class="crm-top"><div><h3>CallCenter · CRM de llamadas con IA y WhatsApp con IA</h3><p>Plataforma comercial para gestionar leads, llamadas, analítica y conversaciones de WhatsApp.</p></div><div class="crm-date" data-hoy>HOY - 20 ago 2026</div></div>
+                  <div><p class="crm-sec">Centro de llamadas · Llamadas</p><p style="margin:6px 0 0;color:#64748b;font-size:12px">Selecciona una marca para ver el historial de llamadas.</p></div>
+                  <div class="crm-kpis"><div class="crm-kpi"><i>▣</i><div><b>19</b><span>Marcas activas</span></div></div><div class="crm-kpi"><i>☰</i><div><b>10627</b><span>Intenciones registradas</span></div></div><div class="crm-kpi"><i>✦</i><div><b>3.7%</b><span>Leads interesados</span></div></div><div class="crm-kpi"><i>☏</i><div><b>2.6</b><span>Media de llamadas por lead</span></div></div></div>
+                  <div class="crm-filters"><select id="crm-month"><option>agosto 2026</option><option>julio 2026</option><option>junio 2026</option></select><input id="crm-search" type="search" placeholder="Buscar marca: Voltara" /><span class="crm-count">10627 intenciones en 19 marcas · 41 en pipeline</span></div>
+                  <div class="crm-grid" id="crm-grid"></div>
+                  <div class="crm-detail" id="crm-detail"><h5 id="crm-detail-title">Historial de llamadas</h5><div id="crm-detail-rows"></div></div>
+                </div>
+                <div class="crm-view" id="crm-home"></div>
+                <div class="crm-view" id="crm-leads"></div>
+                <div class="crm-view" id="crm-stats"></div>
+                <div class="crm-view" id="crm-whatsapp"></div>
+                <div class="crm-view" id="crm-upload"></div>
+                <div class="crm-view" id="crm-settings"></div>
               </div>
             </div></div><div class="edge-light"></div></div>
           </article>
@@ -123,11 +144,12 @@
             <div class="showcase-head"><span class="project-index mono">02</span><div><h3>Operaciones de tareas conectadas</h3><span class="project-role mono">Kanban · Automatización</span></div><div><p>Tablero de trabajo para equipos con automatizaciones que detectan bloqueos y resúmenes con IA. Ahorra horas de coordinación a cada equipo.</p><div class="showcase-tags"><span>TypeScript</span><span>n8n</span><span>Node.js</span></div></div></div>
             <p class="showcase-label mono">Demo · Kanban con IA · arrastra las tarjetas</p>
             <div class="border-glow-card"><div class="showcase-app"><div class="kan">
-              <div class="kan-top"><div class="kan-logo"><i>✓</i>TaskHub</div><button class="kan-space">▾ Espacio · Global</button><input class="kan-search" id="kan-search" type="search" placeholder="Buscar en todas las tareas..." /><button class="kan-recur">↻ Tareas Recurrentes</button><button class="btn-teal" onclick="kanAdd()">+ Nueva Tarea</button><div class="kan-profile"><span class="kan-av" style="background:#0d9488">PR</span>Pablo Roche <span style="color:#9ca3af;font-weight:500">(admin)</span></div></div>
+              <div class="kan-top"><div class="kan-logo"><i>✓</i>TaskHub</div><button class="kan-space" id="kan-space">▾ Espacio · Global</button><input class="kan-search" id="kan-search" type="search" placeholder="Buscar en todas las tareas..." /><button class="kan-recur" id="kan-recur">↻ Tareas Recurrentes</button><button class="btn-teal" onclick="kanAdd()">+ Nueva Tarea</button><div class="kan-profile"><span class="kan-av" style="background:#0d9488">PR</span>Pablo Roche <span style="color:#9ca3af;font-weight:500">(admin)</span></div></div>
               <div class="kan-body">
                 <aside class="kan-proj"><h5>ACCESOS RÁPIDOS</h5><button>⌂ Inicio</button><button>◷ Gestión de Tiempos</button><h5>PROYECTOS</h5><button class="lock">🔒 Automoción · Marca A</button><button>Marca B</button><button>Marca C</button><button>Grupo Automoción</button><button>Marca D</button><button class="active">Global</button><button>TaskHub</button><button>Proyecto X</button><button>Marca E</button><button>Marca F</button><button>Distribuidor G</button><div class="kan-foot"><button>✆ Soporte</button><button>⚙ Configuración</button></div><div class="kan-ver">v2.5.0</div></aside>
                 <div class="kan-main">
                   <div class="kan-metrics"><span class="time">Global · Mi tiempo: 6h 50m <span style="color:#9ca3af;font-weight:500">(Este mes)</span></span><span class="badge-k bk-gray" id="kan-abiertas">ABIERTAS 22</span><span class="badge-k bk-blue">VENCEN HOY 0</span><span class="badge-k bk-red">ATRASADAS 0</span><span class="badge-k bk-orange">CRÍTICAS 10</span><span class="badge-k bk-green">ASIGNADOS 18</span></div>
+                  <div class="kan-rec-panel" id="kan-rec-panel"></div>
                   <div class="kan-board">
                     <div class="kan-col" id="kan-backlog"><h6><span>Ideas / Backlog</span><b class="kan-count">6</b></h6><div class="kan-card" draggable="true"><p>Diseñar flujo de IA para soporte</p><div class="kan-tags"><span class="tag-k tg-ia">IA</span></div><div class="kan-meta"><span class="kan-pri kp-media">Media</span><span class="kan-check">75m</span><span class="kan-avs"><span class="kan-av" style="background:#0d9488">PR</span><span class="kan-av" style="background:#2563eb">AM</span></span></div></div><div class="kan-card" draggable="true"><p>Auditoría SEO del nuevo portal</p><div class="kan-tags"><span class="tag-k tg-seo">SEO</span></div><div class="kan-meta"><span class="kan-pri kp-media">Media</span><span class="kan-check">2h 30m</span><span class="kan-avs"><span class="kan-av" style="background:#7c3aed">DT</span></span></div></div><div class="kan-card" draggable="true"><p>Contenidos RRSS del mes</p><div class="kan-tags"><span class="tag-k tg-rrss">RRSS</span></div><div class="kan-meta"><span class="kan-pri kp-baja">Baja</span><span class="kan-check">5h 30m</span><span class="kan-avs"><span class="kan-av" style="background:#db2777">SR</span></span></div></div><div class="kan-card" draggable="true"><p>Prototipo página de producto</p><div class="kan-tags"><span class="tag-k tg-web">WEB</span></div><div class="kan-meta"><span class="kan-pri kp-baja">Baja</span><span class="kan-check">3h</span><span class="kan-avs"><span class="kan-av" style="background:#f59e0b">LG</span></span></div></div><div class="kan-card" draggable="true"><p>Ideas de campañas automatizadas</p><div class="kan-tags"><span class="tag-k tg-meta">META ADS</span></div><div class="kan-meta"><span class="kan-pri kp-media">Media</span><span class="kan-check">2h</span><span class="kan-avs"><span class="kan-av" style="background:#16a34a">EV</span></span></div></div><div class="kan-card" draggable="true"><p>Pruebas de voz con IA</p><div class="kan-tags"><span class="tag-k tg-ia">IA</span></div><div class="kan-meta"><span class="kan-pri kp-baja">Baja</span><span class="kan-check">90m</span><span class="kan-avs"><span class="kan-av" style="background:#0d9488">PR</span></span></div></div></div>
                     <div class="kan-col" id="kan-todo"><h6><span>Por hacer</span><b class="kan-count">13</b></h6><div class="kan-card" draggable="true"><p>Publicar contenido SEO · bloque 1</p><div class="kan-tags"><span class="tag-k tg-seo">SEO</span><span class="tag-k tg-doc">DOC</span></div><div class="kan-meta"><span class="kan-check">0/4</span><span class="kan-avs"><span class="kan-av" style="background:#7c3aed">DT</span></span></div></div><div class="kan-card" draggable="true"><p>Crear campaña META ADS</p><div class="kan-tags"><span class="tag-k tg-meta">META ADS</span></div><div class="kan-meta"><span class="kan-check">0/1</span><span class="kan-avs"><span class="kan-av" style="background:#16a34a">EV</span></span></div></div><div class="kan-card" draggable="true"><p>Diseño visual para RRSS</p><div class="kan-tags"><span class="tag-k tg-rrss">RRSS</span></div><div class="kan-meta"><span class="kan-check">0/4</span><span class="kan-avs"><span class="kan-av" style="background:#db2777">SR</span></span></div></div><div class="kan-card" draggable="true"><p>Actualizar página de inicio</p><div class="kan-tags"><span class="tag-k tg-web">WEB</span></div><div class="kan-meta"><span class="kan-check">0/2</span><span class="kan-avs"><span class="kan-av" style="background:#f59e0b">LG</span></span></div></div><div class="kan-card" draggable="true"><p>Migrar datos de clientes</p><div class="kan-tags"><span class="tag-k tg-web">WEB</span><span class="tag-k tg-doc">DOC</span></div><div class="kan-meta"><span class="kan-check">0/3</span><span class="kan-avs"><span class="kan-av" style="background:#2563eb">AM</span></span></div></div><div class="kan-card" draggable="true"><p>Configurar tracking de eventos</p><div class="kan-tags"><span class="tag-k tg-meta">META ADS</span></div><div class="kan-meta"><span class="kan-check">0/1</span><span class="kan-avs"><span class="kan-av" style="background:#16a34a">EV</span></span></div></div><div class="kan-card" draggable="true"><p>Redactar guías de producto</p><div class="kan-tags"><span class="tag-k tg-rrss">RRSS</span></div><div class="kan-meta"><span class="kan-check">0/4</span><span class="kan-avs"><span class="kan-av" style="background:#db2777">SR</span></span></div></div><div class="kan-card" draggable="true"><p>Optimizar tiempos de carga</p><div class="kan-tags"><span class="tag-k tg-seo">SEO</span></div><div class="kan-meta"><span class="kan-check">0/2</span><span class="kan-avs"><span class="kan-av" style="background:#7c3aed">DT</span></span></div></div><div class="kan-card" draggable="true"><p>Preparar informativa de marca</p><div class="kan-tags"><span class="tag-k tg-rrss">RRSS</span></div><div class="kan-meta"><span class="kan-check">0/3</span><span class="kan-avs"><span class="kan-av" style="background:#f59e0b">LG</span><span class="kan-av" style="background:#db2777">SR</span></span></div></div><div class="kan-card" draggable="true"><p>Definir buyer personas</p><div class="kan-tags"><span class="tag-k tg-meta">META ADS</span></div><div class="kan-meta"><span class="kan-check">0/1</span><span class="kan-avs"><span class="kan-av" style="background:#2563eb">AM</span></span></div></div><div class="kan-card" draggable="true"><p>Integrar proveedor de voz</p><div class="kan-tags"><span class="tag-k tg-ia">IA</span></div><div class="kan-meta"><span class="kan-check">0/2</span><span class="kan-avs"><span class="kan-av" style="background:#0d9488">PR</span></span></div></div><div class="kan-card" draggable="true"><p>Revisar accesibilidad web</p><div class="kan-tags"><span class="tag-k tg-web">WEB</span></div><div class="kan-meta"><span class="kan-check">0/4</span><span class="kan-avs"><span class="kan-av" style="background:#7c3aed">DT</span></span></div></div><div class="kan-card" draggable="true"><p>Crear plantillas de correo</p><div class="kan-tags"><span class="tag-k tg-rrss">RRSS</span></div><div class="kan-meta"><span class="kan-check">0/3</span><span class="kan-avs"><span class="kan-av" style="background:#16a34a">EV</span></span></div></div></div>
@@ -146,14 +168,21 @@
             <div class="border-glow-card"><div class="showcase-app"><div class="fac">
               <aside class="fac-side">
                 <div class="fac-logo"><i>▤</i>Facturas<div><small>GLOBAL · CONTA</small></div></div>
-                <div class="fac-menu"><button class="active"><i>◨</i>Dashboard</button><button><i>⭱</i>Subir Facturas</button><button><i>◷</i>Historial</button><button><i>✆</i>Soporte</button><button><i>⚠</i>Incidencias</button><button><i>⚙</i>Ajustes</button></div>
+                <div class="fac-menu"><button data-view="dashboard" class="active"><i>◨</i>Dashboard</button><button data-view="upload"><i>⭱</i>Subir Facturas</button><button data-view="history"><i>◷</i>Historial</button><button data-view="support"><i>✆</i>Soporte</button><button data-view="incidents"><i>⚠</i>Incidencias</button><button data-view="settings"><i>⚙</i>Ajustes</button></div>
               </aside>
               <div class="fac-main">
-                <div class="fac-head"><h3>Dashboard</h3><p>Resumen general de tus facturas.</p></div>
-                <div class="fac-kpis"><div class="fac-kpi"><i>▤</i><div><b id="fac-total">5</b><span>Facturas procesadas</span></div></div><div class="fac-kpi"><i>◷</i><div><b>0</b><span>Facturas este mes · <span data-mes></span></span></div></div><div class="fac-kpi"><i>↗</i><div><b id="fac-importe" data-val="4692">4.692 €</b><span>Importe acumulado</span></div></div></div>
-                <div class="fac-table-head"><h4>Últimas Facturas</h4><a>Ver todas →</a></div>
-                <div class="fac-table" id="fac-table"><div class="fac-th"><span>Fecha Factura</span><span>Proveedor</span><span>Nº Factura</span><span>Total</span><span>Estado</span></div></div>
-                <div class="fac-actions"><button class="btn-em" onclick="facAdd()"><i>⭱</i>Subir Nueva Factura</button><button class="btn-outline" onclick="facHistorial()">Ver Historial</button></div>
+                <div class="fac-view active" id="fac-dashboard">
+                  <div class="fac-head"><h3>Dashboard</h3><p>Resumen general de tus facturas.</p></div>
+                  <div class="fac-kpis"><div class="fac-kpi"><i>▤</i><div><b id="fac-total">5</b><span>Facturas procesadas</span></div></div><div class="fac-kpi"><i>◷</i><div><b>0</b><span>Facturas este mes · <span data-mes></span></span></div></div><div class="fac-kpi"><i>↗</i><div><b id="fac-importe" data-val="4692">4.692 €</b><span>Importe acumulado</span></div></div></div>
+                  <div class="fac-table-head"><h4>Últimas Facturas</h4><a id="fac-ver-todas">Ver todas →</a></div>
+                  <div class="fac-table" id="fac-table"><div class="fac-th"><span>Fecha Factura</span><span>Proveedor</span><span>Nº Factura</span><span>Total</span><span>Estado</span></div></div>
+                  <div class="fac-actions"><button class="btn-em" onclick="facAdd()"><i>⭱</i>Subir Nueva Factura</button><button class="btn-outline" onclick="facGo('history')">Ver Historial</button></div>
+                </div>
+                <div class="fac-view" id="fac-upload"></div>
+                <div class="fac-view" id="fac-history"></div>
+                <div class="fac-view" id="fac-support"></div>
+                <div class="fac-view" id="fac-incidents"></div>
+                <div class="fac-view" id="fac-settings"></div>
               </div>
             </div></div><div class="edge-light"></div></div>
           </article>
@@ -236,8 +265,8 @@
         { name:'Ventara Sur', rate:'5.7%', ints:761, calls:2073, pend:0, seg:616, conv:43, fail:102, badge:null },
         { name:'Ventara Norte', rate:'6.3%', ints:504, calls:1374, pend:0, seg:390, conv:32, fail:82, badge:null }
       ];
-      const grid = document.getElementById('crm-grid');
-      grid.innerHTML = brands.map((b, i) => `
+      function renderBrands(){
+        return brands.map((b, i) => `
         <div class="brand-card" data-i="${i}">
           <div class="brand-top"><h4>${b.name}</h4>${b.badge ? `<span class="badge badge-${b.badge[0]}">${b.badge[1]}</span>` : ''}</div>
           <div class="brand-stats"><span style="color:#16a34a;font-weight:600">${b.rate} conversión</span><span>${b.ints} intenciones · ${b.calls} llamadas</span></div>
@@ -248,7 +277,10 @@
             <div class="b-block b-red"><b>${b.fail}</b><span>Fallidos</span></div>
           </div>
           <div class="brand-foot"><span class="brand-link">Ver detalle ›</span><span>IA activa</span></div>
-        </div>`).join('');
+</div>`).join('');
+      }
+      const grid = document.getElementById('crm-grid');
+      grid.innerHTML = renderBrands();
       function crmShow(i){
         const b = brands[i];
         grid.querySelectorAll('.brand-card').forEach(c => c.classList.toggle('active', +c.dataset.i === i));
@@ -266,9 +298,216 @@
         const q = e.target.value.trim().toLowerCase();
         grid.querySelectorAll('.brand-card').forEach(c => { c.style.display = (!q || brands[+c.dataset.i].name.toLowerCase().includes(q)) ? '' : 'none'; });
       });
-      document.querySelectorAll('.crm-menu button, .fac-menu button').forEach(btn => btn.addEventListener('click', () => {
-        btn.parentElement.querySelectorAll('button').forEach(x => x.classList.remove('active'));
-        btn.classList.add('active');
+      // ---------- Vistas interactivas: routers + renderers ----------
+      function toast(msg){
+        let t = document.getElementById('demo-toast');
+        if (!t) { t = document.createElement('div'); t.id = 'demo-toast'; t.className = 'toast'; document.body.appendChild(t); }
+        t.textContent = msg; t.classList.add('show');
+        clearTimeout(t._timer); t._timer = setTimeout(() => t.classList.remove('show'), 2200);
+      }
+      function crmGo(view){
+        document.querySelectorAll('.crm-view').forEach(v => v.classList.toggle('active', v.id === 'crm-' + view));
+        document.querySelectorAll('.crm-menu button').forEach(b => b.classList.toggle('active', b.dataset.view === view));
+        if (view === 'home') renderCrmHome();
+        if (view === 'leads') renderCrmLeads();
+        if (view === 'stats') renderCrmStats();
+        if (view === 'whatsapp') renderCrmWhatsApp();
+        if (view === 'upload') renderCrmUpload();
+        if (view === 'settings') renderCrmSettings();
+      }
+      function facGo(view){
+        document.querySelectorAll('.fac-view').forEach(v => v.classList.toggle('active', v.id === 'fac-' + view));
+        document.querySelectorAll('.fac-menu button').forEach(b => b.classList.toggle('active', b.dataset.view === view));
+        if (view === 'upload') renderFacUpload();
+        if (view === 'history') renderFacHistory();
+        if (view === 'support') renderFacSupport();
+        if (view === 'incidents') renderFacIncidents();
+        if (view === 'settings') renderFacSettings();
+      }
+      document.querySelectorAll('.crm-menu button').forEach(btn => btn.addEventListener('click', () => crmGo(btn.dataset.view)));
+      document.querySelectorAll('.fac-menu button').forEach(btn => btn.addEventListener('click', () => facGo(btn.dataset.view)));
+      document.getElementById('fac-ver-todas').addEventListener('click', () => facGo('history'));
+      document.getElementById('crm-month').addEventListener('change', e => toast('Mostrando datos de ' + e.target.value));
+
+      const leadLabels = { new:'Nuevo', follow:'Seguimiento', done:'Convertido', fail:'Fallido' };
+      const leadStates = ['new','follow','done','fail'];
+      const crmLeadPool = [
+        ['Ana Torres', 'Voltara', 'Interesada en demo', 'follow'],
+        ['Carlos Ruiz', 'Mobius K1', 'Pide presupuesto', 'new'],
+        ['Laura Gil', 'Crystar', 'Llamada agendada', 'follow'],
+        ['Javier Mora', 'Ventara Sur', 'Duda de integración', 'new'],
+        ['Marta Pons', 'Ventara Norte', 'Cerrado · contrato firmado', 'done'],
+        ['Iván Costa', 'Mobius K2', 'Sin respuesta', 'fail']
+      ];
+      function renderCrmHome(){
+        const el = document.getElementById('crm-home');
+        if (el.dataset.rendered) return; el.dataset.rendered = '1';
+        el.innerHTML = `
+          <div class="view-card"><h4>Bienvenido de nuevo</h4><p style="font-size:12px;color:#64748b;line-height:1.55;margin:0">Hoy hay <b style="color:#0f172a">41 leads en pipeline</b> y <b style="color:#0f172a">12 llamadas</b> pendientes de seguimiento. La IA ya cualificó 8 contactos esta mañana.</p></div>
+          <div class="view-card"><h4>Leads recientes</h4>${crmLeadPool.map((l, i) => `<div class="lead-row"><span class="lead-name">${l[0]}</span><span style="color:#64748b">${l[1]}</span><span style="color:#94a3b8;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${l[2]}</span><button class="status-pill sp-${l[3]}" data-i="${i}">${leadLabels[l[3]]}</button></div>`).join('')}</div>
+          <div class="view-card"><h4>Acciones rápidas</h4><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn-em" onclick="crmGo('leads')">Ver leads</button><button class="btn-em" onclick="crmGo('stats')">Estadísticas</button><button class="btn-em" onclick="crmGo('whatsapp')">Abrir WhatsApp</button></div></div>`;
+        el.querySelectorAll('.status-pill').forEach(p => p.addEventListener('click', () => {
+          const l = crmLeadPool[+p.dataset.i];
+          l[3] = leadStates[(leadStates.indexOf(l[3]) + 1) % 4];
+          p.className = 'status-pill sp-' + l[3]; p.textContent = leadLabels[l[3]];
+          toast(l[0] + ' → ' + leadLabels[l[3]]);
+        }));
+      }
+      const crmLeads = [
+        { name:'Ana Torres', brand:'Voltara', phone:'+34 611 220 341', status:'follow', tag:'Demo agendada' },
+        { name:'Carlos Ruiz', brand:'Mobius K1', phone:'+34 622 784 019', status:'new', tag:'Pide presupuesto' },
+        { name:'Laura Gil', brand:'Crystar', phone:'+34 633 450 872', status:'follow', tag:'Llamada agendada' },
+        { name:'Javier Mora', brand:'Ventara Sur', phone:'+34 644 902 331', status:'new', tag:'Duda de integración' },
+        { name:'Marta Pons', brand:'Ventara Norte', phone:'+34 655 118 204', status:'done', tag:'Contrato firmado' },
+        { name:'Iván Costa', brand:'Mobius K2', phone:'+34 666 573 940', status:'fail', tag:'Sin respuesta' }
+      ];
+      function renderCrmLeads(){
+        const el = document.getElementById('crm-leads');
+        el.innerHTML = `<div class="view-card"><h4>Leads · ${crmLeads.length} contactos</h4><p style="font-size:12px;color:#64748b;margin:0 0 10px">Haz clic en el estado para avanzarlo.</p>${crmLeads.map((l, i) => `<div class="lead-row"><span class="lead-name">${l.name}</span><span style="color:#64748b">${l.brand}</span><span style="color:#94a3b8">${l.phone}</span><span style="color:#64748b;flex:1">${l.tag}</span><button class="status-pill sp-${l.status}" data-i="${i}">${leadLabels[l.status]}</button></div>`).join('')}</div>`;
+        el.querySelectorAll('.status-pill').forEach(p => p.addEventListener('click', () => {
+          const l = crmLeads[+p.dataset.i];
+          l.status = leadStates[(leadStates.indexOf(l.status) + 1) % 4];
+          p.className = 'status-pill sp-' + l.status; p.textContent = leadLabels[l.status];
+          toast(l.name + ' → ' + leadLabels[l.status]);
+        }));
+      }
+      function renderCrmStats(){
+        const el = document.getElementById('crm-stats');
+        if (el.dataset.rendered) return; el.dataset.rendered = '1';
+        const bars = [['E', 34], ['F', 52], ['M', 41], ['A', 63], ['M', 58], ['J', 72], ['J', 66], ['A', 81]];
+        el.innerHTML = `
+          <div class="view-card"><h4>Llamadas por mes</h4><div class="bar-chart">${bars.map(b => `<div class="bar" style="height:${b[1]}%"><span>${b[0]}</span></div>`).join('')}</div></div>
+          <div class="view-card"><h4>Conversión por canal</h4>
+            <div class="stat-row"><span>Teléfono</span><div class="stat-bar"><i style="width:64%"></i></div><span>64%</span></div>
+            <div class="stat-row"><span>WhatsApp</span><div class="stat-bar"><i style="width:47%"></i></div><span>47%</span></div>
+            <div class="stat-row"><span>Formulario</span><div class="stat-bar"><i style="width:28%"></i></div><span>28%</span></div>
+          </div>`;
+      }
+      function renderCrmWhatsApp(){
+        const el = document.getElementById('crm-whatsapp');
+        if (el.dataset.rendered) return; el.dataset.rendered = '1';
+        el.innerHTML = `
+          <div class="view-card"><h4>WhatsApp con IA · Voltara</h4>
+            <div class="whatsapp-chat">
+              <div class="msg in">Hola, quería saber si hacéis instalación en Sevilla.</div>
+              <div class="msg out">¡Hola! Sí, cubrimos Sevilla y provincia. ¿Qué necesitas exactamente?</div>
+              <div class="msg in">Un presupuesto para 3 líneas y un CRM sencillo.</div>
+              <div class="msg out">Perfecto. Te paso un enlace con la demo y mañana te llamo a las 10:00. ¿Te vale?</div>
+              <div class="msg in">Genial, gracias.</div>
+            </div>
+            <div class="wa-input"><input id="wa-field" placeholder="Escribe un mensaje..." /><button onclick="waSend()">Enviar</button></div>
+          </div>`;
+      }
+      function waSend(){
+        const input = document.getElementById('wa-field');
+        const v = input.value.trim(); if (!v) return;
+        const chat = document.querySelector('#crm-whatsapp .whatsapp-chat');
+        const out = document.createElement('div'); out.className = 'msg out'; out.textContent = v;
+        chat.appendChild(out); input.value = '';
+        const replies = ['Gracias, lo reviso ahora.', '¿Puedes darme más detalle?', 'Te confirmo por aquí en unos minutos.', 'Perfecto, quedamos en eso.'];
+        setTimeout(() => {
+          const rep = document.createElement('div'); rep.className = 'msg in';
+          rep.textContent = replies[Math.floor(Math.random() * replies.length)];
+          chat.appendChild(rep);
+        }, 900);
+      }
+      function renderCrmUpload(){
+        const el = document.getElementById('crm-upload');
+        if (el.dataset.rendered) return; el.dataset.rendered = '1';
+        el.innerHTML = `
+          <div class="view-card"><h4>Subir CSVs de marcas</h4>
+            <div class="dropzone" onclick="crmDrop()">Suelta aquí tus CSVs o haz clic para seleccionarlos<br /><span style="font-size:11px">Se procesan, normalizan y cargan en el CRM automáticamente</span></div>
+            <p style="font-size:11px;color:#94a3b8;margin:10px 0 0">Formato admitido: .csv · Máx 50 MB</p>
+          </div>`;
+      }
+      function crmDrop(){ toast('CSV recibido · 0 errores · 142 filas importadas'); }
+      function renderCrmSettings(){
+        const el = document.getElementById('crm-settings');
+        if (el.dataset.rendered) return; el.dataset.rendered = '1';
+        const toggles = ['Notificaciones de nuevos leads', 'Resumen diario por email', 'Asistente IA activo', 'Llamadas fuera de horario'];
+        el.innerHTML = `<div class="view-card"><h4>Configuración</h4>${toggles.map((t, i) => `<div class="toggle-row"><span>${t}</span><span class="switch${i < 2 ? ' on' : ''}" data-i="${i}"></span></div>`).join('')}</div>`;
+        el.querySelectorAll('.switch').forEach(s => s.addEventListener('click', () => { s.classList.toggle('on'); toast('Configuración guardada'); }));
+      }
+      function renderFacUpload(){
+        const el = document.getElementById('fac-upload');
+        if (el.dataset.rendered) return; el.dataset.rendered = '1';
+        el.innerHTML = `
+          <div class="view-card"><h4>Subir facturas</h4>
+            <div class="dropzone" onclick="facDrop()">Suelta aquí tus facturas (PDF, XML o foto)<br /><span style="font-size:11px">Se extraen los datos, se concilian y se archivan solas</span></div>
+            <p style="font-size:11px;color:#94a3b8;margin:10px 0 0">Formato admitido: PDF · XML (FACTURAE) · JPG · PNG</p>
+          </div>`;
+      }
+      function facDrop(){ facAdd(); toast('Factura procesada y conciliada'); }
+      function renderFacHistory(){
+        const el = document.getElementById('fac-history');
+        el.innerHTML = `<div class="view-card"><h4>Historial completo</h4><p style="font-size:12px;color:#64748b;margin:0 0 10px">Todas las facturas procesadas por el sistema.</p>${facturas.map(f => `<div class="lead-row"><span class="lead-name">${f[2]}</span><span style="color:#64748b">${f[1]}</span><span style="color:#94a3b8">${f[0]}</span><span style="color:#0f172a;font-weight:600">${f[3]} €</span><span class="status-pill sp-done">Completado</span></div>`).join('')}</div>`;
+      }
+      function renderFacSupport(){
+        const el = document.getElementById('fac-support');
+        if (el.dataset.rendered) return; el.dataset.rendered = '1';
+        el.innerHTML = `
+          <div class="view-card"><h4>Soporte</h4>
+            <div class="whatsapp-chat">
+              <div class="msg in">Hola, no encuentro una factura de marzo.</div>
+              <div class="msg out">Te ayudo. ¿Recuerdas el proveedor o el importe?</div>
+              <div class="msg in">Servicios Cloud Plus, 22,99 €.</div>
+              <div class="msg out">Encontrada: INV-88913 · 15/03/2026. La tienes en Historial.</div>
+            </div>
+            <div class="wa-input"><input id="fac-sup-field" placeholder="Escribe tu consulta..." /><button onclick="facSupSend()">Enviar</button></div>
+          </div>`;
+      }
+      function facSupSend(){
+        const input = document.getElementById('fac-sup-field');
+        const v = input.value.trim(); if (!v) return;
+        const chat = document.querySelector('#fac-support .whatsapp-chat');
+        const out = document.createElement('div'); out.className = 'msg out'; out.textContent = v;
+        chat.appendChild(out); input.value = '';
+        setTimeout(() => {
+          const rep = document.createElement('div'); rep.className = 'msg in';
+          rep.textContent = 'Perfecto, abro un ticket y te respondo en menos de 1 hora.';
+          chat.appendChild(rep);
+        }, 900);
+      }
+      function renderFacIncidents(){
+        const el = document.getElementById('fac-incidents');
+        if (el.dataset.rendered) return; el.dataset.rendered = '1';
+        el.innerHTML = `
+          <div class="view-card"><h4>Incidencias</h4>
+            <div class="lead-row"><span class="lead-name">Factura duplicada</span><span style="color:#64748b">FV-2026-0042</span><span class="status-pill sp-follow">Abierta</span></div>
+            <div class="lead-row"><span class="lead-name">Proveedor no encontrado</span><span style="color:#64748b">Suministros Nova</span><span class="status-pill sp-new">Revisando</span></div>
+            <div class="lead-row"><span class="lead-name">Albarán sin importe</span><span style="color:#64748b">Software Logístico</span><span class="status-pill sp-done">Resuelta</span></div>
+          </div>`;
+      }
+      function renderFacSettings(){
+        const el = document.getElementById('fac-settings');
+        if (el.dataset.rendered) return; el.dataset.rendered = '1';
+        const toggles = ['Conciliación automática', 'Aviso de vencimientos', 'Enviar resumen mensual', 'Copias de seguridad semanales'];
+        el.innerHTML = `<div class="view-card"><h4>Ajustes</h4>${toggles.map((t, i) => `<div class="toggle-row"><span>${t}</span><span class="switch${i < 3 ? ' on' : ''}" data-i="${i}"></span></div>`).join('')}</div>`;
+        el.querySelectorAll('.switch').forEach(s => s.addEventListener('click', () => { s.classList.toggle('on'); toast('Ajustes guardados'); }));
+      }
+
+      // ---------- Kanban: espacios y tareas recurrentes ----------
+      const kanSpaces = ['Global', 'Marca B', 'Marca C', 'Grupo Automoción', 'TaskHub'];
+      let kanSpaceIdx = 0;
+      document.getElementById('kan-space').addEventListener('click', () => {
+        kanSpaceIdx = (kanSpaceIdx + 1) % kanSpaces.length;
+        document.getElementById('kan-space').textContent = '▾ Espacio · ' + kanSpaces[kanSpaceIdx];
+        toast('Espacio cambiado a ' + kanSpaces[kanSpaceIdx]);
+      });
+      const kanRecur = ['Informe semanal de métricas', 'Revisión de leads nuevos', 'Backup de base de datos', 'Limpieza de contactos inactivos'];
+      document.getElementById('kan-recur').addEventListener('click', () => {
+        const panel = document.getElementById('kan-rec-panel');
+        if (panel.classList.contains('open')) { panel.classList.remove('open'); return; }
+        panel.innerHTML = kanRecur.map(r => `<div class="lead-row"><span class="lead-name">↻ ${r}</span><span class="status-pill sp-done">Cada semana</span></div>`).join('');
+        panel.classList.add('open');
+      });
+      document.querySelectorAll('.kan-proj button').forEach(b => b.addEventListener('click', () => {
+        if (b.classList.contains('lock')) { toast('Espacio bloqueado · sin acceso'); return; }
+        if (b.closest('.kan-foot') || /^[⌂◷✆⚙]/.test(b.textContent.trim())) { toast(b.textContent.trim() + ' · acceso rápido'); return; }
+        document.querySelectorAll('.kan-proj button').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        document.getElementById('kan-space').textContent = '▾ Espacio · ' + b.textContent.trim();
+        toast('Proyecto activo: ' + b.textContent.trim());
       }));
       crmShow(0);
 
@@ -302,13 +541,6 @@
         const imp = document.getElementById('fac-importe');
         imp.dataset.val = String(parseFloat(imp.dataset.val) + parseFloat(amt.replace(',', '.')));
         imp.textContent = Math.round(parseFloat(imp.dataset.val)).toLocaleString('es-ES') + ' €';
-      }
-      let facMsgTimer;
-      function facHistorial(){
-        let m = document.getElementById('fac-msg');
-        if (!m) { m = document.createElement('p'); m.id = 'fac-msg'; m.style.cssText = 'font-size:12px;color:#059669;margin:0'; document.querySelector('.fac-actions').after(m); }
-        m.textContent = 'Mostrando las 5 facturas más recientes · Historial completo en la sección Historial';
-        clearTimeout(facMsgTimer); facMsgTimer = setTimeout(() => { m.textContent = ''; }, 2600);
       }
 
       // Kanban de tareas
