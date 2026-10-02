@@ -32,18 +32,38 @@
       .stack-wrap { display:grid; grid-template-columns:.72fr 1.28fr; gap:10%; align-items:start; }.stack-title { font:700 clamp(39px,5vw,70px)/.94 Syne,sans-serif; letter-spacing:-.07em; margin:0; }.stack-groups { display:grid; grid-template-columns:repeat(2,1fr); gap:0 40px; }.stack-group { padding:20px 0 27px; border-top:1px solid var(--line); }.stack-group h3 { margin:0 0 13px; font:600 14px Syne,sans-serif; }.stack-group p { margin:0; color:var(--muted); font-size:13px; line-height:1.65; }
       .contact { background:var(--black); color:var(--ink); padding:110px 0 42px; border-top:1px solid rgba(255,255,255,.06); }.contact .kicker { color:var(--lime); }.contact h2 { max-width:970px; margin:0; font:800 clamp(50px,9vw,122px)/.85 Syne,sans-serif; letter-spacing:-.085em; }.contact h2 em { font-style:normal; color:var(--lime); }.contact-row { margin-top:72px; padding-top:25px; border-top:1px solid #2b2d28; display:flex; align-items:center; justify-content:space-between; gap:25px; }.contact-email { font:600 clamp(18px,2.3vw,31px) Syne,sans-serif; letter-spacing:-.04em; text-decoration:underline; text-underline-offset:7px; transition:color .2s; }.contact-email:hover { color:var(--lime); }.socials { display:flex; gap:20px; font:500 12px "DM Mono",monospace; text-transform:uppercase; }.socials a:hover { color:var(--lime); }.footer { display:flex; justify-content:space-between; padding-top:58px; color:#8a8b84; font-size:11px; }
       .reveal { opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1); will-change:opacity,transform; }.reveal.visible { opacity:1; transform:none; } .reveal:nth-child(2) { transition-delay:.1s; }.reveal:nth-child(3) { transition-delay:.2s; } @keyframes ticker { to { transform:translateX(-50%); } } @keyframes pulse { 50% { transform:scale(.72); opacity:.55; } }
-      /* Terminal de agente IA en vivo (hero) */
+      /* Panel de agente IA en vivo (hero) */
       .hero-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; }
-      .agent-term { position:relative; border-radius:16px; background:#0b0c0e; box-shadow:0 0 90px -30px rgba(215,255,63,.35); border:1px solid rgba(255,255,255,.1); box-shadow:0 30px 80px -20px rgba(0,0,0,.8), 0 0 0 1px rgba(215,255,63,.04), 0 0 60px -18px rgba(215,255,63,.25); overflow:hidden; }
-      .agent-bar { display:flex; align-items:center; gap:8px; padding:12px 16px; border-bottom:1px solid rgba(255,255,255,.07); background:rgba(255,255,255,.02); }
+      .agent-term { position:relative; border-radius:18px; background:linear-gradient(180deg,#121316,#0b0c0e); border:1px solid rgba(255,255,255,.1); box-shadow:0 0 90px -28px rgba(215,255,63,.38), 0 30px 80px -20px rgba(0,0,0,.85), inset 0 1px 0 rgba(255,255,255,.06); overflow:hidden; }
+      .agent-bar { display:flex; align-items:center; gap:7px; padding:13px 16px; border-bottom:1px solid rgba(255,255,255,.07); background:rgba(255,255,255,.025); }
       .agent-dot { width:10px; height:10px; border-radius:50%; }
-      .agent-title { margin-left:8px; font:500 10px "DM Mono",monospace; letter-spacing:.1em; text-transform:uppercase; color:#8a8b84; }
-      .agent-live { margin-left:auto; display:flex; align-items:center; gap:6px; font:700 9px "DM Mono",monospace; letter-spacing:.12em; color:#70ba49; }
-      .agent-live b { width:6px; height:6px; border-radius:50%; background:#70ba49; animation:pulse 2s infinite; }
-      .agent-body { padding:20px 20px 24px; font:500 12.5px/1.75 "DM Mono",monospace; min-height:250px; }
-      .agent-line { color:#c4c1b8; } .agent-line .p { color:var(--lime); } .agent-line .ok { color:#7fce62; } .agent-line .dim { color:#9a978f; }
-      .cursor { display:inline-block; width:7px; height:14px; margin-left:2px; background:var(--lime); vertical-align:-2px; animation:blink 1s steps(1) infinite; }
-      @keyframes blink { 50% { opacity:0; } }
+      .agent-title { margin-left:8px; font:500 10px "DM Mono",monospace; letter-spacing:.1em; text-transform:uppercase; color:#9a978f; }
+      .agent-live { margin-left:auto; display:flex; align-items:center; gap:6px; font:700 9px "DM Mono",monospace; letter-spacing:.12em; color:#7fce62; }
+      .agent-live b { width:6px; height:6px; border-radius:50%; background:#7fce62; animation:pulse 2s infinite; }
+      .agent-body { padding:18px 18px 8px; display:flex; flex-direction:column; gap:9px; min-height:268px; }
+      .step { display:flex; align-items:flex-start; gap:11px; padding:11px 13px; border-radius:12px; background:rgba(255,255,255,.028); border:1px solid rgba(255,255,255,.06); opacity:0; transform:translateY(8px); transition:opacity .45s cubic-bezier(.2,.7,.2,1),transform .45s cubic-bezier(.2,.7,.2,1); }
+      .step.on { opacity:1; transform:none; }
+      .step-ico { width:30px; height:30px; border-radius:9px; display:grid; place-items:center; flex-shrink:0; background:rgba(215,255,63,.1); color:var(--lime); }
+      .step-ico svg { width:15px; height:15px; }
+      .step-main { flex:1; min-width:0; }
+      .step-name { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+      .step-name b { font:700 12px "DM Sans",sans-serif; color:#ecebe4; letter-spacing:-.01em; }
+      .st { font:700 9px "DM Mono",monospace; letter-spacing:.08em; text-transform:uppercase; }
+      .st-wait { color:#9a978f; } .st-run { color:#febc2e; } .st-done { color:#7fce62; }
+      .spin { display:inline-block; width:10px; height:10px; border:2px solid rgba(254,188,46,.3); border-top-color:#febc2e; border-radius:50%; animation:spin .7s linear infinite; vertical-align:-1px; margin-right:4px; }
+      @keyframes spin { to { transform:rotate(360deg); } }
+      .step-detail { margin-top:4px; font:500 10.5px/1.5 "DM Mono",monospace; color:#b8b5ac; }
+      .step-detail .q { color:#c4c1b8; }
+      .chips { display:flex; gap:6px; flex-wrap:wrap; margin-top:6px; }
+      .chip { font:700 9px "DM Mono",monospace; letter-spacing:.05em; padding:4px 8px; border-radius:99px; background:rgba(215,255,63,.12); color:var(--lime); }
+      .chip.alt { background:rgba(139,147,255,.14); color:#a8aeff; }
+      .wave { display:flex; align-items:center; gap:3px; height:16px; margin-top:6px; }
+      .wave i { width:3px; border-radius:2px; background:var(--lime); animation:wv 1s ease-in-out infinite; }
+      @keyframes wv { 0%,100% { height:4px; opacity:.5; } 50% { height:15px; opacity:1; } }
+      .agent-foot { display:flex; align-items:center; justify-content:space-between; padding:12px 18px; border-top:1px solid rgba(255,255,255,.07); font:500 9.5px "DM Mono",monospace; letter-spacing:.06em; color:#9a978f; }
+      .agent-foot b { color:#c4c1b8; }
+      .agent-foot .fin { color:#7fce62; font-weight:700; opacity:0; transition:opacity .4s; }
+      .agent-foot .fin.on { opacity:1; }
       @media (max-width:980px) { .hero-grid { grid-template-columns:1fr; gap:40px; } .agent-term { max-width:560px; } }
       /* Entrada coreografiada del hero al cargar (solo transform/opacity) */
       @keyframes heroIn { from { opacity:0; transform:translateY(34px); } to { opacity:1; transform:none; } }
@@ -135,10 +155,17 @@
             <div class="hero-ctas hero-in" style="--hd:340ms"><a class="cta-main" href="#proyectos">Ver proyectos <span aria-hidden="true">→</span></a><a class="cta-ghost" href="mailto:pablo.roche07@gmail.com">Hablemos</a></div>
           </div>
           <div class="hero-in" style="--hd:420ms">
-            <div class="agent-term" id="agentTerm" role="img" aria-label="Demostración animada: un agente de IA procesando una llamada, creando una tarea y enviando un correo automáticamente">
+            <div class="agent-term" id="agentTerm" role="img" aria-label="Demostración animada: un agente de IA atendiendo una llamada, analizándola con IA, creando el lead en el CRM y respondiendo por WhatsApp automáticamente">
               <div class="agent-bar"><span class="agent-dot" style="background:#ff5f57"></span><span class="agent-dot" style="background:#febc2e"></span><span class="agent-dot" style="background:#28c840"></span><span class="agent-title">agent — pabloroche.dev</span><span class="agent-live"><b></b>LIVE</span></div>
-              <div class="agent-body" id="agentBody"></div>
-            </div>
+              <div class="agent-body" id="agentBody">
+                <div class="step" data-step="0"><div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div class="step-main"><div class="step-name"><b>Llamada entrante</b><span class="st st-wait" data-st>esperando</span></div><div class="step-detail">+34 612 34 56 78 · línea 2<span class="wave" aria-hidden="true"><i style="animation-delay:0s"></i><i style="animation-delay:.12s"></i><i style="animation-delay:.24s"></i><i style="animation-delay:.36s"></i><i style="animation-delay:.48s"></i><i style="animation-delay:.6s"></i><i style="animation-delay:.72s"></i><i style="animation-delay:.84s"></i><i style="animation-delay:.96s"></i><i style="animation-delay:1.08s"></i><i style="animation-delay:.2s"></i><i style="animation-delay:.44s"></i></span></div></div></div>
+                <div class="step" data-step="1"><div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="step-main"><div class="step-name"><b>Transcripción</b><span class="st st-wait" data-st>en cola</span></div><div class="step-detail">“<span class="q">quiero presupuesto para la web de mi negocio</span>”</div></div></div>
+                <div class="step" data-step="2"><div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></div><div class="step-main"><div class="step-name"><b>Análisis IA</b><span class="st st-wait" data-st>en cola</span></div><div class="chips"><span class="chip">INTENCIÓN: PRECIO</span><span class="chip alt">SCORE: 0.87</span><span class="chip alt">SENTIMIENTO: POSITIVO</span></div></div></div>
+                <div class="step" data-step="3"><div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div><div class="step-main"><div class="step-name"><b>CRM · lead creado</b><span class="st st-wait" data-st>en cola</span></div><div class="step-detail">Voltara · estado: <span class="q">interesado</span> · asignado a ventas</div></div></div>
+                <div class="step" data-step="4"><div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div><div class="step-main"><div class="step-name"><b>WhatsApp · respuesta</b><span class="st st-wait" data-st>en cola</span></div><div class="step-detail">propuesta + link de calendario enviado</div></div></div>
+              </div>
+              <div class="agent-foot"><span>latencia <b>2.1s</b> · tareas hoy <b>147</b></span><span class="fin" id="agentFin">✓ atendido en 38s · 0 intervención humana</span></div>
+            </div></div>
           </div>
         </div>
         <div class="hero-bottom hero-in" style="--hd:460ms"><span class="mono">Portfolio · 2026</span><a class="round-link" href="#proyectos" aria-label="Ver proyectos">↓</a><span class="mono">AI · Automation · Full Stack</span></div>
@@ -235,48 +262,34 @@
       <section class="contact"><div class="shell"><p class="kicker mono">Conexión</p><h2>¿Tienes un proceso<br />que debería <em>funcionar mejor?</em></h2><div class="contact-row"><a class="contact-email" href="mailto:pablo.roche07@gmail.com">pablo.roche07@gmail.com</a><div class="socials"><a href="https://www.linkedin.com/in/pablo-tom%C3%A1s-rodr%C3%ADguez-roche-096410317/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/pabloroche" target="_blank" rel="noreferrer">GitHub ↗</a></div></div><footer class="footer"><span>© <span id="year"></span> Pablo Roche · AI Engineer · Automation Specialist</span><span>Sevilla, España · Disponible para proyectos</span></footer></div></section>
     </main>
     <script>
-      // Terminal del agente en el hero: escriba su actividad en bucle
+      // Panel del agente en el hero: pasos que se completan en bucle
       (() => {
         const body = document.getElementById('agentBody');
+        const fin = document.getElementById('agentFin');
         if (!body) return;
+        const steps = [...body.querySelectorAll('.step')];
         const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const lines = [
-          { t: '<span class="p">></span> lead entrante · +34 6XX XXX XXX', c: 'p' },
-          { t: '<span class="dim">audio → transcript…</span> <span class="ok">ok 2.1s</span>', c: '' },
-          { t: '<span class="p">ia.analizar("</span>quiero presupuesto para mi web<span class="p">")</span>', c: '' },
-          { t: '<span class="dim">intención: PRECIO · score: 0.87 · sentimiento +</span>', c: '' },
-          { t: '<span class="p">crm.crear_lead(</span>Voltara, interesado<span class="p">)</span> <span class="ok">✓</span>', c: '' },
-          { t: '<span class="p">kanban.nueva_tarea(</span>"Llamar lead · oferta web"<span class="p">)</span> <span class="ok">✓</span>', c: '' },
-          { t: '<span class="p">whatsapp.enviar(</span>respuesta + link calendario<span class="p">)</span> <span class="ok">✓</span>', c: '' },
-          { t: '<span class="ok">— lead atendido en 38s · sin intervención humana —</span>', c: '' },
-        ];
         if (reduced) {
-          body.innerHTML = lines.map(l => `<div class="agent-line ${l.c}">${l.t}</div>`).join('');
+          steps.forEach(st => { st.classList.add('on'); const el = st.querySelector('[data-st]'); el.textContent = '✓ ok'; el.className = 'st st-done'; });
+          fin.classList.add('on');
           return;
         }
-        let li = 0, ci = 0, out = [];
-        const render = () => { body.innerHTML = out.map(t => `<div class="agent-line">${t}</div>`).join('') + (li < lines.length ? `<div class="agent-line">${lines[li].t.slice(0, ci)}<span class="cursor"></span></div>` : ''); };
-        const step = () => {
-          if (li >= lines.length) { setTimeout(() => { out = []; li = 0; ci = 0; step(); }, 4200); return; }
-          if (ci === 0) out.push('');
-          const plain = lines[li].t;
-          ci++;
-          // avanzar por caracteres pero renderizando el HTML completo: escribir plano y al terminar la linea, swap a HTML coloreado
-          const total = plain.replace(/<[^>]+>/g, '').length;
-          if (ci <= total) {
-            // construir texto parcial sin romper tags: escribir char a char del texto sin tags
-            const txt = plain.replace(/<[^>]+>/g, '');
-            out[out.length - 1] = txt.slice(0, ci) + '<span class="cursor"></span>';
-            render();
-            setTimeout(step, 18 + Math.random() * 30);
-          } else {
-            out[out.length - 1] = plain + '';
-            render();
-            li++; ci = 0;
-            setTimeout(step, 320);
-          }
+        const run = () => {
+          steps.forEach(st => { st.classList.remove('on'); const el = st.querySelector('[data-st]'); el.innerHTML = 'esperando'; el.className = 'st st-wait'; });
+          fin.classList.remove('on');
+          steps.forEach((st, i) => {
+            setTimeout(() => {
+              st.classList.add('on');
+              const el = st.querySelector('[data-st]');
+              el.innerHTML = '<span class="spin"></span>ejecutando';
+              el.className = 'st st-run';
+              setTimeout(() => { el.innerHTML = '✓ ok'; el.className = 'st st-done'; }, 520);
+            }, i * 850);
+          });
+          setTimeout(() => fin.classList.add('on'), steps.length * 850 + 300);
         };
-        step();
+        run();
+        setInterval(run, steps.length * 850 + 5600);
       })();
       document.getElementById('year').textContent = new Date().getFullYear();
       const observer = new IntersectionObserver((entries) => entries.forEach(({isIntersecting,target}) => { if (isIntersecting) { target.classList.add('visible'); observer.unobserve(target); } }), { threshold:.12 });
