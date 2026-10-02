@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Portfolio de Pablo Roche: AI Engineer & Automation Specialist. Administración de Empresas + IA y automatización. Convierto procesos de negocio en sistemas que trabajan solos." />
     <title>Pablo Roche — AI Engineer & Automation Specialist</title>
+    <meta name="theme-color" content="#f3f1eb" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2311100e'/%3E%3Ctext x='32' y='44' font-family='Arial Black,sans-serif' font-size='34' font-weight='900' fill='%23d7ff3f' text-anchor='middle'%3EPR%3C/text%3E%3C/svg%3E" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pablo Roche — AI Engineer & Automation Specialist" />
+    <meta property="og:description" content="Convierto procesos de negocio en sistemas que trabajan solos. Administración de Empresas + IA y automatización. Demos interactivas incluidas." />
+    <meta property="og:url" content="https://pabloroche.github.io/" />
+    <meta property="og:locale" content="es_ES" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Pablo Roche — AI Engineer & Automation Specialist" />
+    <meta name="twitter:description" content="Convierto procesos de negocio en sistemas que trabajan solos. IA, automatización y full stack, con demos interactivas." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
@@ -22,13 +32,21 @@
       .stack-wrap { display:grid; grid-template-columns:.72fr 1.28fr; gap:10%; align-items:start; }.stack-title { font:700 clamp(39px,5vw,70px)/.94 Syne,sans-serif; letter-spacing:-.07em; margin:0; }.stack-groups { display:grid; grid-template-columns:repeat(2,1fr); gap:0 40px; }.stack-group { padding:20px 0 27px; border-top:1px solid var(--line); }.stack-group h3 { margin:0 0 13px; font:600 14px Syne,sans-serif; }.stack-group p { margin:0; color:var(--muted); font-size:13px; line-height:1.65; }
       .contact { background:var(--ink); color:var(--paper); padding:110px 0 42px; }.contact .kicker { color:var(--lime); }.contact h2 { max-width:970px; margin:0; font:800 clamp(50px,9vw,122px)/.85 Syne,sans-serif; letter-spacing:-.085em; }.contact h2 em { font-style:normal; color:var(--lime); }.contact-row { margin-top:72px; padding-top:25px; border-top:1px solid #2b2d28; display:flex; align-items:center; justify-content:space-between; gap:25px; }.contact-email { font:600 clamp(18px,2.3vw,31px) Syne,sans-serif; letter-spacing:-.04em; text-decoration:underline; text-underline-offset:7px; transition:color .2s; }.contact-email:hover { color:var(--lime); }.socials { display:flex; gap:20px; font:500 12px "DM Mono",monospace; text-transform:uppercase; }.socials a:hover { color:var(--lime); }.footer { display:flex; justify-content:space-between; padding-top:58px; color:#8a8b84; font-size:11px; }
       .reveal { opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1); will-change:opacity,transform; }.reveal.visible { opacity:1; transform:none; } .reveal:nth-child(2) { transition-delay:.1s; }.reveal:nth-child(3) { transition-delay:.2s; } @keyframes ticker { to { transform:translateX(-50%); } } @keyframes pulse { 50% { transform:scale(.72); opacity:.55; } }
+      /* Entrada coreografiada del hero al cargar (solo transform/opacity) */
+      @keyframes heroIn { from { opacity:0; transform:translateY(34px); } to { opacity:1; transform:none; } }
+      .hero-in { opacity:0; animation:heroIn .8s cubic-bezier(.2,.75,.25,1) forwards; animation-delay:var(--hd,0ms); }
+      .hero-ctas { display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; }
+      .cta-main { display:inline-flex; align-items:center; gap:10px; padding:17px 30px; border-radius:99px; background:var(--ink); color:var(--lime); font:700 16px "DM Sans",sans-serif; letter-spacing:-.01em; box-shadow:0 10px 26px rgba(17,16,14,.22); transition:transform .2s,box-shadow .2s; }
+      .cta-main:hover { transform:translateY(-2px); box-shadow:0 16px 34px rgba(17,16,14,.3); }
+      .cta-ghost { display:inline-flex; align-items:center; gap:10px; padding:17px 30px; border-radius:99px; border:2px solid var(--ink); font:700 15px "DM Sans",sans-serif; transition:background .2s,transform .2s; }
+      .cta-ghost:hover { background:var(--lime); transform:translateY(-2px); }
       /* Escalonado de entradas por sección */
       .reveal-stagger > * { opacity:0; transform:translateY(22px); transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1); will-change:opacity,transform; } .reveal-stagger.visible > * { opacity:1; transform:none; } .reveal-stagger.visible > *:nth-child(1) { transition-delay:.05s; }.reveal-stagger.visible > *:nth-child(2) { transition-delay:.14s; }.reveal-stagger.visible > *:nth-child(3) { transition-delay:.23s; }.reveal-stagger.visible > *:nth-child(4) { transition-delay:.32s; }.reveal-stagger.visible > *:nth-child(5) { transition-delay:.41s; }.reveal-stagger.visible > *:nth-child(6) { transition-delay:.5s; }
       /* Micro-interacciones: enlaces de tarjetas, tags y demos */
       .showcase-head h3 { transition:color .25s; }.showcase:hover .showcase-head h3 { color:var(--lime); }.showcase-tags span { transition:color .2s,border-color .2s,background .2s; cursor:default; }.showcase-tags span:hover { color:#fff; border-color:#6b6f66; background:#252725; }.project-index { transition:transform .3s cubic-bezier(.2,.7,.2,1); display:inline-block; }.showcase:hover .project-index { transform:translateX(6px); }
       /* Demos: entrada suave al hacer scroll (se activa al llegar a ellas) */
       .showcase-app { opacity:0; transform:translateY(18px) scale(.985); transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1); }.showcase-app.in { opacity:1; transform:none; }
-      @media (prefers-reduced-motion:reduce) { .reveal,.reveal-stagger > *,.showcase-app { opacity:1!important; transform:none!important; transition:none!important; } }
+      @media (prefers-reduced-motion:reduce) { .reveal,.reveal-stagger > *,.showcase-app,.hero-in { opacity:1!important; transform:none!important; transition:none!important; animation:none!important; } }
       /* ---------- Demos interactivas (embebidas) ---------- */
       .showcase-list { margin-top:30px; }.showcase { margin-top:28px; }.project-index { color:var(--lime); }.project-role { display:block; margin-bottom:9px; color:var(--lime); font-size:10px; }.showcase-head { display:grid; grid-template-columns:60px 1.15fr .85fr; gap:24px; align-items:center; padding:36px 0 24px; border-top:1px solid #363833; }.showcase-head h3 { margin:0 0 10px; font:600 clamp(22px,2.7vw,36px)/1 Syne,sans-serif; letter-spacing:-.055em; }.showcase-head p { margin:0; color:#d3d2cb; line-height:1.45; font-size:13px; }.showcase-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }.showcase-tags span { color:#a9a9a2; border:1px solid #494b45; border-radius:99px; padding:4px 8px; font:500 9px "DM Mono",monospace; }.showcase-label { display:flex; align-items:center; gap:10px; margin:0 0 16px; color:#8a8b84; font-size:11px; }.showcase-label::after { content:''; flex:1; height:1px; background:#2b2d28; }.showcase-app { border-radius:18px; overflow:hidden; border:1px solid #2b2d28; box-shadow:0 34px 70px #0006; }
       
@@ -97,10 +115,11 @@
     <header class="shell nav"><a class="brand" href="#top"><i>↗</i><span>Pablo Roche<small>AI Engineer</small></span></a><nav class="nav-links" aria-label="Navegación"><a href="#sobre-mi">Sobre mí</a><a href="#proyectos">Proyectos</a><a href="#stack">Stack</a><a class="nav-email" href="mailto:pablo.roche07@gmail.com">Contactar</a></nav></header>
     <main id="top">
       <section class="shell hero">
-        <div class="status mono"><b></b> Disponible para proyectos seleccionados · Sevilla / Remoto</div>
-        <div class="reveal"><h1 class="hero-title">Pablo Roche</h1><p class="hero-sub mono"><b>AI Engineer</b> · Automation Specialist</p><p class="hero-copy">Convierto procesos de negocio en sistemas que trabajan solos. Administración de Empresas + IA y automatización: entiendo el negocio y lo traduzco en arquitecturas técnicas que resuelven trabajo real.</p></div>
-        <div class="hero-bottom"><span class="mono">Portfolio · 2026</span><a class="round-link" href="#proyectos" aria-label="Ver proyectos">↓</a><span class="mono">AI · Automation · Full Stack</span></div>
-        <div class="sys-strip"><div class="sys-cell"><b></b><span>Disponible<strong>Sevilla · Remoto</strong></span></div><div class="sys-cell"><b></b><span>Formación<strong>Administración y Dirección de Empresas</strong></span></div><div class="sys-cell"><b></b><span>Enfoque<strong>IA Generativa</strong></span></div></div>
+        <div class="status mono hero-in" style="--hd:80ms"><b></b> Disponible para proyectos seleccionados · Sevilla / Remoto</div>
+        <div class="hero-in" style="--hd:180ms"><h1 class="hero-title">Pablo Roche</h1><p class="hero-sub mono"><b>AI Engineer</b> · Automation Specialist</p><p class="hero-copy">Convierto procesos de negocio en sistemas que trabajan solos. Administración de Empresas + IA y automatización: entiendo el negocio y lo traduzco en arquitecturas técnicas que resuelven trabajo real.</p></div>
+        <div class="hero-ctas hero-in" style="--hd:340ms"><a class="cta-main" href="#proyectos">Ver proyectos <span aria-hidden="true">→</span></a><a class="cta-ghost" href="mailto:pablo.roche07@gmail.com">Hablemos</a></div>
+        <div class="hero-bottom hero-in" style="--hd:460ms"><span class="mono">Portfolio · 2026</span><a class="round-link" href="#proyectos" aria-label="Ver proyectos">↓</a><span class="mono">AI · Automation · Full Stack</span></div>
+        <div class="sys-strip hero-in" style="--hd:560ms"><div class="sys-cell"><b></b><span>Disponible<strong>Sevilla · Remoto</strong></span></div><div class="sys-cell"><b></b><span>Formación<strong>Administración y Dirección de Empresas</strong></span></div><div class="sys-cell"><b></b><span>Enfoque<strong>IA Generativa</strong></span></div></div>
       </section>
       <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>AI Engineering</span><b>✦</b><span>Automatización n8n</span><b>✦</b><span>Voz con IA</span><b>✦</b><span>Full Stack</span><b>✦</b><span>AI Engineering</span><b>✦</b><span>Automatización n8n</span><b>✦</b><span>Voz con IA</span><b>✦</b><span>Full Stack</span><b>✦</b></div></div>
       <section id="sobre-mi" class="shell">
